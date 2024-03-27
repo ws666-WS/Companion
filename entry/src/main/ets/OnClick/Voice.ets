@@ -1,0 +1,50 @@
+import router from '@ohos.router'
+@Entry
+@Preview
+@Component
+struct Voice{
+  build(){
+    Column(){
+      Button({type: ButtonType.Normal}){
+        Image($r("app.media.left"))
+      }.width("10%")
+      .height(50)
+      .backgroundColor(0x18191D)
+      .margin({
+        right:270,
+        top:20
+      })
+      .onClick(()=>{
+        router.pushUrl({
+          url:"pages/MainPage2"
+        })
+      })
+      Image($r("app.media.curve"))
+        .width(300)
+        .height(300)
+        .margin({
+          top:20
+        })
+      Text("Hi,有什么需要帮助的吗？")
+        .fontSize(25)
+        .fontWeight(FontWeight.Bold)
+        .fontColor(Color.White)
+      Text("请对我说")
+        .fontSize(25)
+        .fontWeight(FontWeight.Bold)
+        .fontColor(Color.White)
+        .margin({
+          top:30
+        })
+      Image($r("app.media.agora"))
+        .width(210)
+        .height(210)
+        .margin({
+          top:60
+        })
+    }.width("100%")
+    .height("100%")
+    .backgroundImage($r("app.media.Background"))
+    .backgroundImageSize(ImageSize.Cover)
+  }
+}

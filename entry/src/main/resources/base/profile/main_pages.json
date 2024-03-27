@@ -1,0 +1,15 @@
+{
+  "src": [
+    "pages/Login",
+    "pages/MainPage",
+    "pages/MainPage2",
+    "pages/LoadingPage",
+    "pages/Register",
+    "view/Control",
+    "OnClick/BlueTooth",
+    "OnClick/Lock",
+    "OnClick/Music",
+    "OnClick/ReCharge",
+    "OnClick/Voice"
+  ]
+}

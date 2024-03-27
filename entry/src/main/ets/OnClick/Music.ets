@@ -1,0 +1,51 @@
+import router from '@ohos.router'
+@Entry
+@Preview
+@Component
+struct Music{
+  build(){
+    Column(){
+      Button({type: ButtonType.Normal}){
+        Image($r("app.media.left"))
+      }.width("10%")
+      .height(50)
+      .backgroundColor(0x18191D)
+      .margin({
+        right:270,
+        top:20,
+        bottom:90
+      })
+      .onClick(()=>{
+        router.pushUrl({
+          url:"pages/MainPage2"
+        })
+      })
+      Button({ type: ButtonType.Normal}) {
+        Column(){
+          Image($r("app.media.earphone"))
+            .width(170)
+            .height(170)
+        }
+      }.width(270)
+      .height(270)
+      .backgroundColor(0xA9A9A9)
+      .borderRadius(25)
+      Row(){
+        Image($r("app.media.previousSong"))
+          .width(100)
+          .height(100)
+        Image($r("app.media.operation"))
+          .width(130)
+          .height(130)
+        Image($r("app.media.nextSong"))
+          .width(100)
+          .height(100)
+      }.margin({
+        top:150
+      })
+    }.width("100%")
+    .height("100%")
+    .backgroundImage($r("app.media.Background"))
+    .backgroundImageSize(ImageSize.Cover)
+  }
+}

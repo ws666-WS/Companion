@@ -1,0 +1,44 @@
+import router from '@ohos.router'
+@Entry
+@Preview
+@Component
+struct ReCharge{
+  build(){
+    Column(){
+      Button({type: ButtonType.Normal}){
+      Image($r("app.media.left"))
+      }.width("10%")
+      .height(50)
+      .backgroundColor(0x18191D)
+      .margin({
+        right:270,
+        top:20
+      })
+      .onClick(()=>{
+        router.pushUrl({
+          url:"pages/MainPage2"
+        })
+      })
+      Image($r("app.media.charging"))
+        .width(300)
+        .height(300)
+        .margin({
+          top:100
+        })
+      Button(){
+        Text("开始充电")
+          .fontSize(30)
+          .fontWeight(FontWeight.Bold)
+          .fontColor(Color.White)
+      }.width("70%")
+      .height(80)
+      .backgroundColor(0x61ACD7)
+      .margin({
+        top:100
+      })
+    }.width("100%")
+    .height("100%")
+    .backgroundImage($r("app.media.Background"))
+    .backgroundImageSize(ImageSize.Cover)
+  }
+}

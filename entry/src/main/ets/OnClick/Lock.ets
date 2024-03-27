@@ -1,0 +1,42 @@
+import router from '@ohos.router'
+@Entry
+@Preview
+@Component
+struct Lock{
+  build(){
+    Column(){
+      Button({type: ButtonType.Normal}){
+        Image($r("app.media.left"))
+      }.width("10%")
+      .height(50)
+      .backgroundColor(0x18191D)
+      .margin({
+        right:270,
+        top:20
+      })
+      .onClick(()=>{
+        router.pushUrl({
+          url:"pages/MainPage2"
+        })
+      })
+      Image($r("app.media.car"))
+        .width(400)
+        .height(400)
+        .margin({
+          top:50,
+          right:20
+        })
+      Row({space:15}){
+        Image($r("app.media.circle"))
+          .width(20)
+          .height(20)
+        Text("车辆已锁定")
+          .fontSize(25)
+          .fontColor(Color.White)
+      }
+    }.width("100%")
+    .height("100%")
+    .backgroundImage($r("app.media.Background"))
+    .backgroundImageSize(ImageSize.Cover)
+  }
+}

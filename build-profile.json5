@@ -1,0 +1,41 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\21925\\.ohos\\config\\auto_debug_Peihu_com.example.peihu_30086000661719529.cer",
+          "storePassword": "0000001BB221B6BDCE964FBF30BE81C84EBC6C6C6A69BC99DA09D39CF69A99CC01C9D3B7FAB6BF4F0C841D",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BC1D97C3A199ABA54397E9ABEEC98C5D615B687E40AD4E2040564D0FE8C2D9D1E4C0C7ED96264F6",
+          "profile": "C:\\Users\\21925\\.ohos\\config\\auto_debug_Peihu_com.example.peihu_30086000661719529.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\21925\\.ohos\\config\\auto_debug_Peihu_com.example.peihu_30086000661719529.p12"
+        }
+      }
+    ],
+    "compileSdkVersion": 9,
+    "compatibleSdkVersion": 9,
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

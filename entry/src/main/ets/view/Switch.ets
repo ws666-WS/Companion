@@ -1,0 +1,42 @@
+@Preview
+@Component
+export struct Switch {
+  build() {
+    Column(){
+      Text("移助同行")
+        .fontSize(45)
+        .fontColor(Color.White)
+        .fontWeight(FontWeight.Bold)
+        .margin({
+          top:40
+        })
+      Image($r("app.media.car"))
+        .width(450)
+        .height(450)
+        .margin({
+          top:5,
+          right:30
+        })
+      Text("致力于失能老人坐站姿态转换")
+        .fontSize(20)
+        .fontColor(Color.White)
+        .fontWeight(FontWeight.Bold)
+        .margin({
+          top:10
+        })
+      Button({ type: ButtonType.Circle}) {
+        Image($r("app.media.suo"))
+          .width(45)
+          .height(45)
+      }.width(80)
+      .height(80)
+      .margin({
+        top:40,
+        left:15
+      })
+      .backgroundColor(0x48D1CC)
+    }.width("100%")
+    .height("100%")
+    .backgroundImage($r("app.media.Background"))
+  }
+}

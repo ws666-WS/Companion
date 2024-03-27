@@ -1,0 +1,138 @@
+import router from '@ohos.router'
+@Entry
+@Preview
+@Component
+export struct Control {
+  build() {
+    Column(){
+      Image($r("app.media.car"))
+        .width(300)
+        .height(300)
+        .margin({
+          top:5,
+          right:30
+        })
+      Row({space:30}){
+        Column({space:30}){
+          Button({ type: ButtonType.Normal,stateEffect: true}) {
+            Column(){
+              Image($r("app.media.voice"))
+                .width(45)
+                .height(45)
+                .margin({
+                  bottom:15
+                })
+              Text("语音识别")
+                .fontSize(22)
+                .fontWeight(FontWeight.Bold)
+            }
+          }.width(130)
+          .height(130)
+          .backgroundColor(0xA9A9A9)
+          .borderRadius(25)
+          .onClick(()=>{
+            router.pushUrl({
+              url:"OnClick/Voice"
+            })
+          })
+          Button({ type: ButtonType.Normal,stateEffect: true}) {
+            Column(){
+              Image($r("app.media.music"))
+                .width(45)
+                .height(45)
+                .margin({
+                  bottom:15
+                })
+              Text("音乐播放")
+                .fontSize(22)
+                .fontWeight(FontWeight.Bold)
+            }
+          }.width(130)
+          .height(130)
+          .backgroundColor(0xA9A9A9)
+          .borderRadius(25)
+          .onClick(()=>{
+            router.pushUrl({
+              url:"OnClick/Music"
+            })
+          })
+        }.margin({
+          left: 36
+        })
+        Column({space:30}){
+          Button({ type: ButtonType.Normal ,stateEffect: true}) {
+            Column(){
+              Image($r("app.media.bluetooth"))
+                .width(45)
+                .height(45)
+                .margin({
+                  bottom:15
+                })
+              Text("蓝牙连接")
+                .fontSize(22)
+                .fontWeight(FontWeight.Bold)
+            }
+          }.width(130)
+          .height(130)
+          .backgroundColor(0xA9A9A9)
+          .borderRadius(25)
+          .onClick(()=>{
+            router.pushUrl({
+              url:"OnClick/BlueTooth"
+            })
+          })
+          Button({ type: ButtonType.Normal}) {
+            Column(){
+              Image($r("app.media.clock2"))
+                .width(45)
+                .height(45)
+                .margin({
+                  bottom:15
+                })
+              Text("一键锁定")
+                .fontSize(22)
+                .fontWeight(FontWeight.Bold)
+            }
+          }.width(130)
+          .height(130)
+          .backgroundColor(0xA9A9A9)
+          .borderRadius(25)
+          .onClick(()=>{
+            router.pushUrl({
+              url:"OnClick/Lock"
+            })
+          })
+        }.margin({
+          right: 31
+        })
+      }.width("100%")
+      .height("30%")
+      .alignItems(VerticalAlign.Center)
+      .margin({
+        bottom:40
+      })
+      Button({ type: ButtonType.Circle}) {
+        Image($r("app.media.light3"))
+          .width(70)
+          .height(70)
+          .margin({
+            top:5,
+            left:3
+          })
+      }.width(100)
+      .height(100)
+      .backgroundColor(0x48D1CC)
+      .margin({
+        top:50,
+        left:10
+      })
+      .onClick(()=>{
+        router.pushUrl({
+          url:"OnClick/ReCharge"
+        })
+      })
+    }.width("100%")
+    .height("100%")
+    .backgroundImage($r("app.media.Background"))
+  }
+}
